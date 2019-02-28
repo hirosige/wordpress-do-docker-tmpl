@@ -1,0 +1,57 @@
+#! /bin/bash
+
+CMD_NAME="hbgm"
+CUR_PATH=`dirname $0`
+ERR_CHECK=
+RUN_MODULE="run"
+  DEV="env:dev"
+  PROD="env:prod"
+
+if [ "${1}" = "" ]; then
+    echo ""
+    echo "Usage: ${CMD_NAME} <module> <command>"
+    echo ""
+    echo "Common commands:"
+    echo "    run    : run container"
+    echo ""
+    exit 1
+fi
+
+if [ "${1}" = "${RUN_MODULE}" ]; then
+    if [ "${2}" = "" ]; then
+        echo ""
+        echo "Usage: ${CMD_NAME} ${RUN_MODULE} <env> <docker command>"
+        echo ""
+        echo "Common commands:"
+        echo "    env:dev    : run containers for development"
+        echo "    env:prod   : run containers for production"
+        echo ""
+        exit 1
+    fi
+
+    if [ "${2}" = "${DEV}" ]; then
+        if [ "${3}" = "" ]; then
+            echo ""
+            echo "Usage: ${CMD_NAME} ${RUN_MODULE} ${2} <docker command>"
+            echo ""
+            echo "Common commands:"
+            echo "    ps      : check docker containers process"
+            echo "    up -d   : upstart containers for production"
+            echo "    down    : shutdown containers for production"
+            echo "    restart : restart containers for production"
+            echo ""
+            exit 1
+        fi
+
+        if [ "${4}" != "" ]; then
+            sudo docker-compose -f $CUR_PATH/../docker-compose.dev.yml ${3} ${4}
+            exit 1
+        fi
+
+        sudo docker-compose -f $CUR_PATH/../docker-compose.dev.yml ${3}
+    fi
+
+    if [ "${2}" = "${PROD}" ]; then
+        sudo docker-compose -f $CUR_PATH/../docker-compose.prod.yml up -d
+    fi
+fi
