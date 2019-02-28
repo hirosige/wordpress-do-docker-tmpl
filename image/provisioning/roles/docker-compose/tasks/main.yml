@@ -1,0 +1,9 @@
+- name: install docker-compose
+  pip:
+    name: docker-compose
+
+- name: upgrade pip
+  command: pip install requests==2.6.0
+
+- name: upgrade pip-2
+  command: easy_install --upgrade pip

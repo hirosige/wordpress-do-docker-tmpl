@@ -1,0 +1,126 @@
+/*
+Theme Name: Poet
+Template: author
+Theme URI: https://www.competethemes.com/poet/
+Author: Compete Themes
+Author URI: https://www.competethemes.com
+Description: Poet is a child theme for the Author theme and brings a new color palette to this beautiful theme. Poet is designed for publishers who want readers. That’s why Poet is fast, responsive, accessibility-ready, and optimally designed for reading. All scripts and stylesheets are minified, concatenated, and conditionally loaded to maximize performance. The layout adapts fluidly to all screen sizes to enhance usability. As one of few accessibility-ready themes, it performs well for users with wide ranges of disabilities. Based on the ancient Van de Graaf canon, Poet features a layout that promotes readability. Use Poet to create a simple blog, magazine, or news website. The simple and minimalist design works great for gaming, business, fashion, music, food, travel, and photography niches. Now with complete WooCommerce support for eCommerce stores. Preview Poet now on desktop, tablets, and mobile devices with the interactive live demo: https://www.competethemes.com/demos/?theme=poet
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, silver, tan, white, dark, light, one-column, two-columns, left-sidebar, fluid-layout, responsive-layout, accessibility-ready, custom-menu, featured-images, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+Poet WordPress Theme, Copyright 2018 Compete Themes
+Poet is distributed under the terms of the GNU GPL
+
+Poet is a child theme of Author
+
+It's not recommended to add CSS to this file, as it will be lost if you ever update this child theme.
+ Instead, use the Custom CSS section in the Customizer.
+
+*/
+/*===== Variables =====*/
+/* Theme Colors */
+/* Social Media Brand Colors */
+/*===== Mixins =====*/
+/***** Silent Classes *****/
+@import url("../author/style.min.css");
+/* Base */
+body {
+  background: white;
+}
+body:before {
+  background: white;
+}
+
+.main {
+  background: #27292B;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', 'serif';
+}
+
+/* Sidebar/Header */
+.main-sidebar {
+  background: white;
+}
+
+.site-title a {
+  color: #27292B;
+}
+.site-title a:link, .site-title a:visited {
+  color: #27292B;
+}
+.site-title a:hover, .site-title a:active, .site-title a:focus {
+  color: #27292B;
+}
+
+.tagline {
+  color: #5c6066;
+}
+
+.toggle-navigation,
+.toggle-dropdown {
+  color: #27292B;
+}
+
+.menu-primary a {
+  color: #27292B;
+}
+.menu-primary a:link, .menu-primary a:visited {
+  color: #27292B;
+}
+.menu-primary a:hover, .menu-primary a:active, .menu-primary a:focus {
+  color: #27292B;
+}
+
+.menu-primary-items .menu-item-has-children ul a {
+  color: #3E4145;
+}
+.menu-primary-items .menu-item-has-children ul a:link, .menu-primary-items .menu-item-has-children ul a:visited, .menu-primary-items .menu-item-has-children ul a:hover, .menu-primary-items .menu-item-has-children ul a:active, .menu-primary-items .menu-item-has-children ul a:focus {
+  color: #3E4145;
+}
+.menu-primary-items .menu-item-has-children ul ul a {
+  color: #5c6066;
+}
+.menu-primary-items .menu-item-has-children ul ul a:link, .menu-primary-items .menu-item-has-children ul ul a:visited, .menu-primary-items .menu-item-has-children ul ul a:hover, .menu-primary-items .menu-item-has-children ul ul a:active, .menu-primary-items .menu-item-has-children ul ul a:focus {
+  color: #5c6066;
+}
+
+.social-media-icons a {
+  color: #5c6066;
+}
+.social-media-icons a:link, .social-media-icons a:visited {
+  color: #5c6066;
+}
+.social-media-icons a:hover, .social-media-icons a:active, .social-media-icons a:focus {
+  color: #27292B;
+}
+
+/* Post/Page */
+.post-title {
+  line-height: 1.3;
+}
+
+/* Blog/Archive */
+.sticky-status {
+  background: white;
+  color: #27292B;
+}
+
+/* Widgets */
+.sidebar-primary .widget {
+  color: #5c6066;
+}
+.sidebar-primary .widget a {
+  color: #5c6066;
+}
+.sidebar-primary .widget a:link, .sidebar-primary .widget a:visited, .sidebar-primary .widget a:hover, .sidebar-primary .widget a:active, .sidebar-primary .widget a:focus {
+  color: #5c6066;
+}
+.sidebar-primary .widget-title {
+  color: #27292B;
+}
+
+/*# sourceMappingURL=style.css.map */

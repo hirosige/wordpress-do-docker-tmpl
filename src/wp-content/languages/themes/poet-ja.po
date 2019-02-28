@@ -1,0 +1,32 @@
+# Translation of Themes - Poet in Japanese
+# This file is distributed under the same license as the Themes - Poet package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-08-30 02:01:44+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Themes - Poet\n"
+
+#. Description of the plugin/theme
+msgid "Poet is a child theme for the Author theme."
+msgstr "PoetはAuthorの子テーマです。"
+
+#. Theme Name of the plugin/theme
+msgid "Poet"
+msgstr "Poet"
+
+#. Author URI of the plugin/theme
+msgid "https://www.competethemes.com"
+msgstr "https://www.competethemes.com"
+
+#. Author of the plugin/theme
+msgid "Compete Themes"
+msgstr "Compete Themes"
+
+#. Theme URI of the plugin/theme
+msgid "https://www.competethemes.com/poet/"
+msgstr "https://www.competethemes.com/poet/"

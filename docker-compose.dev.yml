@@ -1,0 +1,53 @@
+version: '3.2'
+services:
+  db:
+    image: mariadb
+    container_name: db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE:
+      MYSQL_USER:
+      MYSQL_PASSWORD:
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - blog-infr
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    container_name: web
+    volumes: [
+      './src:/var/www/html',
+      './config/php/php.ini:/usr/local/etc/php/php.ini',
+    ]
+    ports:
+      - 80:80
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST:
+      WORDPRESS_DB_PASSWORD:
+    networks:
+      - blog-infr
+
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - '8080:80'
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD:
+    networks:
+      - blog-infr
+
+volumes:
+  db-data:
+
+networks:
+  blog-infr:
